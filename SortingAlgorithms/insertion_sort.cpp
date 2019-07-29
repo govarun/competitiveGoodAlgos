@@ -73,13 +73,24 @@ void insertion_sort(int* a, int n) {
     fa(i, 1, n - 1) {
         int temp = a[i];
         int j = i - 1;
-        while (j >= 0 && a[j] > a[i]) {
-            a[j + 1] = a[i];
+        while (j >= 0 && a[j] > temp) {
+            a[j + 1] = a[j];
+            --j;
         }
+        a[j + 1] = temp;
     }
+    return;
 }
 
 void solve(){
-    
+    int n; cin >> n;
+    int a[n];
+    f(i, n) {
+        cin >> a[i];
+    }
+    insertion_sort(a, n);
+    f(i, n) {
+        cout << a[i] << ' ';
+    }
     
 }
