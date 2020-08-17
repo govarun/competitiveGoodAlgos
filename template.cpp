@@ -33,6 +33,7 @@ void _print(T t, V... v) {__print(t); if (sizeof...(v)) cerr << ", "; _print(v..
 #define f(i, n) for(int i=0;i<(n);++i)
 #define fa(i, a, n) for(int i=(a);i<=(n);++i)
 #define fd(i, a, n) for(int i=(a);i>=(n);--i)
+#define trav(a,x) for(auto &a:x)
 #define all(x) x.begin(), x.end()
 #define sz(x) (int)(x).size()
 #define fill(a)  memset(a, 0, sizeof (a))
@@ -41,10 +42,11 @@ void _print(T t, V... v) {__print(t); if (sizeof...(v)) cerr << ", "; _print(v..
 #define mp make_pair
 #define pb push_back
 #define endl '\n'
-typedef long long ll;
 typedef long double ld;
-typedef pair<int, int> pii;
-typedef vector<int> vi;
+typedef long long ll;
+typedef vector<ll> vl;      typedef vector<int> vi;
+typedef vector<vl> vvl;     typedef vector<vi> vvi;
+typedef pair<ll, ll> pll;   typedef pair<int, int> pii;
 inline bool EQ(double a, double b) {return fabs(a-b) < 1e-9;}
 ll gcd(ll a, ll b){if(b==0)return a;return gcd(b, a%b);}
 ll lcm(ll a, ll b){return a*(b/gcd(a, b));}
