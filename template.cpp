@@ -53,6 +53,8 @@ ll lcm(ll a, ll b){return a*(b/gcd(a, b));}
 ll binexp(ll a, ll b, ll mod){ll ans = 1;while(b){if(b&1) ans = ans*a%mod; b/=2;a=a*a%mod;}return ans;}
 ll inverse(ll a, ll p, ll mod){return binexp(a, p-2, mod);}
 // bool sortbysec(const pll &a, const pll &b){return (a.second < b.second);} 
+void createadj(vvl& adj, ll m){ll x, y; f(i, m){cin>>x>>y;x--, y--;adj[x].pb(y);adj[y].pb(x);}}
+
 const ll mod = 1e9 + 7;
 const int maxn = 1e5 + 5;
 void pre(){
